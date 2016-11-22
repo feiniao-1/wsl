@@ -1,0 +1,12 @@
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="build" namespace="/" extends="struts-default"><!-- 这句话意思就是你说的了，只要找不到action，都会找这个默认的action -->
+
+		<!-- 配置默认action -->
+    <default-action-ref name="ImgUpload" />
+   <action name="ImgUpload" class="com.home.ImgUploadAction" method="imgUpload">
+    </action> 
+	</package>
+</struts>

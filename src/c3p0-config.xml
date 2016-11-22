@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+	<!-- This app is massive! -->
+	<named-config name="jxapp">
+		<property name="acquireIncrement">2</property>
+		<property name="initialPoolSize">5</property>
+		<property name="minPoolSize">5</property>
+
+
+		<property name="maxPoolSize">20</property>
+		<!-- intergalactoApp adopts a different approach to configuring statement 
+			caching -->
+		<property name="maxStatements">10</property>
+		<property name="maxStatementsPerConnection">5</property>
+
+		<property name="user">root</property>
+		<property name="password">mysql123</property>
+		<!-- <property name="password">root</property> -->
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+		<property name="jdbcUrl">jdbc:mysql://139.129.27.119:3306/wsl?useUnicode=true&amp;characterEncoding=UTF8</property><!-- 办公室服务器 -->
+		<!-- <property name="jdbcUrl">jdbc:mysql://139.129.27.119:3306/blogtest?useUnicode=true&amp;characterEncoding=UTF8</property>   个人云服务器-->
+		<property name="preferredTestQuery">SELECT 1</property>
+		<property name="idleConnectionTestPeriod">18000</property>
+		<property name="testConnectionOnCheckout">true</property>
+		<!-- <property name="jdbcUrl">jdbc:mysql://127.0.0.1:3306/jx?useUnicode=true&amp;characterEncoding=UTF8</property> -->
+	</named-config>
+</c3p0-config>
